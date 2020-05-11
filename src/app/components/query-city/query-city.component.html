@@ -19,45 +19,36 @@
          >Get Weather Report
       </ion-button>
    </form>
-   <ion-list>
-      <ion-item
-         *ngIf="
-            !location.controls.city.valid && !location.controls.city.pristine
-         "
-      >
-         <ion-text color="danger">
-            <p>City is required</p>
-         </ion-text>
-      </ion-item>
-      <ion-item
-         *ngIf="
-            location.controls.city.value === '' &&
-            location.controls.city.touched
-         "
-      >
-         <ion-text color="danger">
-            <p>City is empty</p>
-         </ion-text>
-      </ion-item>
-      <ion-item
-         *ngIf="
-            !location.controls.country.valid &&
-            !location.controls.country.pristine
-         "
-      >
-         <ion-text color="danger">
-            <p>Country is required</p>
-         </ion-text>
-      </ion-item>
-      <ion-item
-         *ngIf="
-            location.controls.country.value === '' &&
-            location.controls.country.touched
-         "
-      >
-         <ion-text color="danger">
-            <p>Country is empty</p>
-         </ion-text>
-      </ion-item>
-   </ion-list>
+   <ion-text
+      *ngIf="!location.controls.city.valid && !location.controls.city.pristine"
+      color="danger"
+      class="ion-text-center"
+   >
+      <p>City is required</p>
+   </ion-text>
+   <ion-text
+      color="danger"
+      *ngIf="
+         location.controls.city.value === '' && location.controls.city.touched
+      "
+   >
+      <p>City is empty</p>
+   </ion-text>
+   <ion-text
+      color="danger"
+      *ngIf="
+         !location.controls.country.valid && !location.controls.country.pristine
+      "
+   >
+      <p>Country is required</p>
+   </ion-text>
+   <ion-text
+      color="danger"
+      *ngIf="
+         location.controls.country.value === '' &&
+         location.controls.country.touched
+      "
+   >
+      <p>Country is empty</p>
+   </ion-text>
 </div>
