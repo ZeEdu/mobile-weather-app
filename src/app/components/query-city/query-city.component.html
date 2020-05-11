@@ -1,0 +1,63 @@
+<div id="container">
+   <form [formGroup]="location">
+      <ion-item>
+         <ion-label position="stacked">City</ion-label>
+         <ion-input formControlName="city"></ion-input>
+      </ion-item>
+
+      <ion-item>
+         <ion-label position="stacked">Country ID (Ex: USA, UK, BR)</ion-label>
+         <ion-input formControlName="country"></ion-input>
+      </ion-item>
+
+      <ion-button
+         color="primary"
+         [disabled]="!location.valid"
+         routerLink="/report/{{ location.controls.city.value }}/{{
+            location.controls.country.value
+         }}"
+         >Get Weather Report
+      </ion-button>
+   </form>
+   <ion-list>
+      <ion-item
+         *ngIf="
+            !location.controls.city.valid && !location.controls.city.pristine
+         "
+      >
+         <ion-text color="danger">
+            <p>City is required</p>
+         </ion-text>
+      </ion-item>
+      <ion-item
+         *ngIf="
+            location.controls.city.value === '' &&
+            location.controls.city.touched
+         "
+      >
+         <ion-text color="danger">
+            <p>City is empty</p>
+         </ion-text>
+      </ion-item>
+      <ion-item
+         *ngIf="
+            !location.controls.country.valid &&
+            !location.controls.country.pristine
+         "
+      >
+         <ion-text color="danger">
+            <p>Country is required</p>
+         </ion-text>
+      </ion-item>
+      <ion-item
+         *ngIf="
+            location.controls.country.value === '' &&
+            location.controls.country.touched
+         "
+      >
+         <ion-text color="danger">
+            <p>Country is empty</p>
+         </ion-text>
+      </ion-item>
+   </ion-list>
+</div>
