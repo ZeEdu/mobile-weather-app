@@ -3,6 +3,25 @@
       src="http://openweathermap.org/img/wn/{{ report.weather[0].icon }}@2x.png"
       class="weather-icon"
    ></ion-img>
-   <h1>{{ report.name }}</h1>
-   <p>{{ report.main.temp }} Cº</p>
+   <ion-text color="primary">
+      <h1>{{ report.name }}, {{ report.sys.country }}</h1>
+   </ion-text>
+   <ion-text color="tertiary">
+      <p>{{ report.main.temp }} Cº</p>
+   </ion-text>
+
+   <div class="border-green ion-align-self-baseline">
+      <ion-img
+         src="assets/images/wind.svg"
+         class="wind-icon inline-block bottom-icon"
+      ></ion-img>
+      <span class="inline-block bottom-text"
+         >{{ report.wind.speed }} M/sec</span
+      >
+      <ion-img
+         src="assets/images/humidity.svg"
+         class="humidity-icon inline-block bottom-icon"
+      ></ion-img>
+      <span class="inline-block bottom-text">{{ report.main.humidity }} %</span>
+   </div>
 </div>
