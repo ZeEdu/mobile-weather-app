@@ -12,7 +12,7 @@ let AppComponent = class AppComponent {
     }
     initializeApp() {
         this.platform.ready().then(() => {
-            this.statusBar.styleDefault();
+            this.statusBar.styleLightContent();
             this.splashScreen.hide();
         });
     }
@@ -21,7 +21,7 @@ AppComponent = tslib_1.__decorate([
     Component({
         selector: 'app-root',
         templateUrl: 'app.component.html',
-        styleUrls: ['app.component.scss']
+        styleUrls: ['app.component.scss'],
     }),
     tslib_1.__metadata("design:paramtypes", [Platform,
         SplashScreen,

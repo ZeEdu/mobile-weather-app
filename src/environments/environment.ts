@@ -6,7 +6,7 @@ export const environment = {
    production: false,
 };
 
-export const OPEN_WEATHER_KEY = '';
+export const OPEN_WEATHER_KEY = '4c81ed6f2f955af88eba373111234fef\n';
 
 /*
  * For easier debugging in development mode, you can import the following file
