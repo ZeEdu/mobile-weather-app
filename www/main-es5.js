@@ -939,7 +939,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var _this = this;
 
           this.platform.ready().then(function () {
-            _this.statusBar.styleDefault();
+            _this.statusBar.styleLightContent();
 
             _this.splashScreen.hide();
           });
@@ -1112,7 +1112,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var environment = {
       production: false
     };
-    var OPEN_WEATHER_KEY = '4c81ed6f2f955af88eba373111234fef';
+    var OPEN_WEATHER_KEY = '4c81ed6f2f955af88eba373111234fef\n';
     /*
      * For easier debugging in development mode, you can import the following file
      * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.

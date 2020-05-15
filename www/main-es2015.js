@@ -780,7 +780,7 @@ let AppComponent = class AppComponent {
     }
     initializeApp() {
         this.platform.ready().then(() => {
-            this.statusBar.styleDefault();
+            this.statusBar.styleLightContent();
             this.splashScreen.hide();
         });
     }
@@ -882,7 +882,7 @@ __webpack_require__.r(__webpack_exports__);
 const environment = {
     production: false,
 };
-const OPEN_WEATHER_KEY = '4c81ed6f2f955af88eba373111234fef';
+const OPEN_WEATHER_KEY = '4c81ed6f2f955af88eba373111234fef\n';
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
