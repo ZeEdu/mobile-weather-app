@@ -706,21 +706,17 @@ __webpack_require__.r(__webpack_exports__);
 
 const routes = [
     {
-        path: 'home',
-        loadChildren: () => Promise.all(/*! import() | home-home-module */[__webpack_require__.e("common"), __webpack_require__.e("home-home-module")]).then(__webpack_require__.bind(null, /*! ./home/home.module */ "./src/app/home/home.module.ts")).then((m) => m.HomePageModule),
-    },
-    {
         path: '',
         redirectTo: 'home',
         pathMatch: 'full',
     },
     {
         path: 'home',
-        loadChildren: () => Promise.all(/*! import() | home-home-module */[__webpack_require__.e("common"), __webpack_require__.e("home-home-module")]).then(__webpack_require__.bind(null, /*! ./home/home.module */ "./src/app/home/home.module.ts")).then((m) => m.HomePageModule),
+        loadChildren: () => __webpack_require__.e(/*! import() | home-home-module */ "home-home-module").then(__webpack_require__.bind(null, /*! ./home/home.module */ "./src/app/home/home.module.ts")).then((m) => m.HomePageModule),
     },
     {
         path: 'report/:city/:country',
-        loadChildren: () => Promise.all(/*! import() | report-report-module */[__webpack_require__.e("common"), __webpack_require__.e("report-report-module")]).then(__webpack_require__.bind(null, /*! ./report/report.module */ "./src/app/report/report.module.ts")).then((m) => m.ReportPageModule),
+        loadChildren: () => __webpack_require__.e(/*! import() | report-report-module */ "report-report-module").then(__webpack_require__.bind(null, /*! ./report/report.module */ "./src/app/report/report.module.ts")).then((m) => m.ReportPageModule),
     },
 ];
 let AppRoutingModule = class AppRoutingModule {
@@ -824,8 +820,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/fesm2015/ionic-angular.js");
 /* harmony import */ var _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @ionic-native/splash-screen/ngx */ "./node_modules/@ionic-native/splash-screen/ngx/index.js");
 /* harmony import */ var _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @ionic-native/status-bar/ngx */ "./node_modules/@ionic-native/status-bar/ngx/index.js");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
+/* harmony import */ var _ionic_native_vibration_ngx__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @ionic-native/vibration/ngx */ "./node_modules/@ionic-native/vibration/ngx/index.js");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
+
 
 
 
@@ -841,21 +839,22 @@ let AppModule = class AppModule {
 };
 AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-        declarations: [_app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"]],
+        declarations: [_app_component__WEBPACK_IMPORTED_MODULE_10__["AppComponent"]],
         entryComponents: [],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"],
             _ionic_angular__WEBPACK_IMPORTED_MODULE_6__["IonicModule"].forRoot(),
-            _app_routing_module__WEBPACK_IMPORTED_MODULE_10__["AppRoutingModule"],
+            _app_routing_module__WEBPACK_IMPORTED_MODULE_11__["AppRoutingModule"],
             _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"],
-            _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormsModule"]
+            _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormsModule"],
         ],
         providers: [
             _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_8__["StatusBar"],
             _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_7__["SplashScreen"],
             { provide: _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouteReuseStrategy"], useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_6__["IonicRouteStrategy"] },
+            _ionic_native_vibration_ngx__WEBPACK_IMPORTED_MODULE_9__["Vibration"],
         ],
-        bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"]],
+        bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_10__["AppComponent"]],
     })
 ], AppModule);
 

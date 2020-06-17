@@ -21,7 +21,27 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div id=\"container\">\n   <ion-img src=\"assets/images/page_not_found.svg\" class=\"error-icon\"></ion-img>\n   <h1 class=\"error-response-title\">Ops! We couldn't find this city!</h1>\n   <h2 class=\"error-response-paragraph\">Please, Try Again!!</h2>\n</div>\n";
+    __webpack_exports__["default"] = "<div id=\"container\">\n   <ion-img src=\"assets/images/page_not_found.svg\" class=\"error-icon\"></ion-img>\n   <h1 class=\"error-response-title\">Ops! {{ error.statusText }}!</h1>\n   <h2 class=\"error-response-paragraph\">Please, Try Again!!</h2>\n</div>\n";
+    /***/
+  },
+
+  /***/
+  "./node_modules/raw-loader/dist/cjs.js!./src/app/components/display-geolocation-error/display-geolocation-error.component.html":
+  /*!*************************************************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/components/display-geolocation-error/display-geolocation-error.component.html ***!
+    \*************************************************************************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function node_modulesRawLoaderDistCjsJsSrcAppComponentsDisplayGeolocationErrorDisplayGeolocationErrorComponentHtml(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "<div id=\"container\">\n   <ion-img src=\"assets/images/page_not_found.svg\" class=\"error-icon\"></ion-img>\n   <h1 class=\"error-response-title\">{{ geoError.message }}</h1>\n   <h2 class=\"error-response-paragraph\">Please, Try Again!!</h2>\n</div>\n";
     /***/
   },
 
@@ -41,7 +61,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div id=\"container\">\n   <ion-img\n      src=\"http://openweathermap.org/img/wn/{{ report.weather[0].icon }}@2x.png\"\n      class=\"weather-icon\"\n   ></ion-img>\n   <ion-text color=\"primary\">\n      <h1>{{ report.name }}, {{ report.sys.country }}</h1>\n   </ion-text>\n   <ion-text color=\"tertiary\">\n      <p>{{ report.main.temp }} Cº</p>\n   </ion-text>\n\n   <div class=\"border-green ion-align-self-baseline\">\n      <ion-img\n         src=\"assets/images/wind.svg\"\n         class=\"wind-icon inline-block bottom-icon\"\n      ></ion-img>\n      <span class=\"inline-block bottom-text\"\n         >{{ report.wind.speed }} M/sec</span\n      >\n      <ion-img\n         src=\"assets/images/humidity.svg\"\n         class=\"humidity-icon inline-block bottom-icon\"\n      ></ion-img>\n      <span class=\"inline-block bottom-text\">{{ report.main.humidity }} %</span>\n   </div>\n</div>\n";
+    __webpack_exports__["default"] = "<ion-grid>\n   <ion-row>\n      <ion-col size=\"4\">\n         <ion-card color=\"primary\">\n            <ion-img\n               src=\"https://openweathermap.org/img/wn/{{\n                  report.weather[0].icon\n               }}@2x.png\"\n               class=\"weather-icon\"\n            ></ion-img>\n         </ion-card>\n      </ion-col>\n\n      <ion-col size=\"8\">\n         <ion-card color=\"primary\">\n            <ion-card-header>\n               <ion-card-subtitle>{{\n                  report.weather[0].main\n               }}</ion-card-subtitle>\n               <ion-card-title class=\"ion-text-capitalize\"\n                  >{{ report.weather[0].description }}\n               </ion-card-title>\n            </ion-card-header>\n         </ion-card>\n      </ion-col>\n   </ion-row>\n   <ion-row>\n      <ion-col size=\"6\">\n         <ion-card color=\"secondary\">\n            <ion-card-header>\n               <ion-card-subtitle>Temperature</ion-card-subtitle>\n               <ion-card-title>{{ report.main.temp }} °C</ion-card-title>\n            </ion-card-header>\n         </ion-card>\n      </ion-col>\n      <ion-col size=\"6\">\n         <ion-card color=\"secondary\">\n            <ion-card-header>\n               <ion-card-subtitle>{{ report.sys.country }}</ion-card-subtitle>\n               <ion-card-title>{{ report.name }}</ion-card-title>\n            </ion-card-header>\n         </ion-card>\n      </ion-col>\n   </ion-row>\n\n   <ion-row>\n      <ion-col size=\"6\">\n         <ion-card color=\"secondary\">\n            <ion-card-header>\n               <ion-card-subtitle>Minimum Temperature</ion-card-subtitle>\n               <ion-card-title>{{ report.main.temp_min }}</ion-card-title>\n            </ion-card-header>\n         </ion-card>\n      </ion-col>\n      <ion-col size=\"6\">\n         <ion-card color=\"secondary\">\n            <ion-card-header>\n               <ion-card-subtitle>Maximum Temperature</ion-card-subtitle>\n               <ion-card-title>{{ report.main.temp_max }}</ion-card-title>\n            </ion-card-header>\n         </ion-card>\n      </ion-col>\n   </ion-row>\n\n   <ion-row>\n      <ion-col size=\"6\">\n         <ion-card color=\"secondary\">\n            <ion-card-header>\n               <ion-card-subtitle\n                  >{{ report.main.humidity }} %</ion-card-subtitle\n               >\n               <ion-card-title>Humidity</ion-card-title>\n            </ion-card-header>\n         </ion-card>\n      </ion-col>\n      <ion-col size=\"6\">\n         <ion-card color=\"secondary\">\n            <ion-card-header>\n               <ion-card-subtitle\n                  >{{ report.wind.speed }} M/sec</ion-card-subtitle\n               >\n               <ion-card-title>Wind Speed</ion-card-title>\n            </ion-card-header>\n         </ion-card>\n      </ion-col>\n   </ion-row>\n</ion-grid>\n";
     /***/
   },
 
@@ -144,6 +164,84 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
+  "./src/app/components/display-geolocation-error/display-geolocation-error.component.scss":
+  /*!***********************************************************************************************!*\
+    !*** ./src/app/components/display-geolocation-error/display-geolocation-error.component.scss ***!
+    \***********************************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function srcAppComponentsDisplayGeolocationErrorDisplayGeolocationErrorComponentScss(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = ".error-icon {\n  text-align: center;\n  display: block;\n  margin-left: auto;\n  margin-right: auto;\n  height: 250px;\n  width: 250px;\n}\n\n.error-response-title {\n  text-align: center;\n  font-size: 1.25rem;\n}\n\n.error-response-paragraph {\n  text-align: center;\n  font-size: 0.9rem;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2VkdWFyZG8vUHJvamV0b3MvZGlzcG9zaXRpdm9zLW1vdmVpcy1JSS9FbnRyZWdhcy93ZWF0aGVyLWFwcC9zcmMvYXBwL2NvbXBvbmVudHMvZGlzcGxheS1nZW9sb2NhdGlvbi1lcnJvci9kaXNwbGF5LWdlb2xvY2F0aW9uLWVycm9yLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9jb21wb25lbnRzL2Rpc3BsYXktZ2VvbG9jYXRpb24tZXJyb3IvZGlzcGxheS1nZW9sb2NhdGlvbi1lcnJvci5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNHLGtCQUFBO0VBQ0EsY0FBQTtFQUNBLGlCQUFBO0VBQ0Esa0JBQUE7RUFDQSxhQUFBO0VBQ0EsWUFBQTtBQ0NIOztBREVBO0VBQ0csa0JBQUE7RUFDQSxrQkFBQTtBQ0NIOztBRENBO0VBQ0csa0JBQUE7RUFDQSxpQkFBQTtBQ0VIIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50cy9kaXNwbGF5LWdlb2xvY2F0aW9uLWVycm9yL2Rpc3BsYXktZ2VvbG9jYXRpb24tZXJyb3IuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuZXJyb3ItaWNvbiB7XG4gICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICBkaXNwbGF5OiBibG9jaztcbiAgIG1hcmdpbi1sZWZ0OiBhdXRvO1xuICAgbWFyZ2luLXJpZ2h0OiBhdXRvO1xuICAgaGVpZ2h0OiAyNTBweDtcbiAgIHdpZHRoOiAyNTBweDtcbn1cblxuLmVycm9yLXJlc3BvbnNlLXRpdGxlIHtcbiAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgIGZvbnQtc2l6ZTogMS4yNXJlbTtcbn1cbi5lcnJvci1yZXNwb25zZS1wYXJhZ3JhcGgge1xuICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgZm9udC1zaXplOiAwLjlyZW07XG59XG4iLCIuZXJyb3ItaWNvbiB7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgZGlzcGxheTogYmxvY2s7XG4gIG1hcmdpbi1sZWZ0OiBhdXRvO1xuICBtYXJnaW4tcmlnaHQ6IGF1dG87XG4gIGhlaWdodDogMjUwcHg7XG4gIHdpZHRoOiAyNTBweDtcbn1cblxuLmVycm9yLXJlc3BvbnNlLXRpdGxlIHtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xuICBmb250LXNpemU6IDEuMjVyZW07XG59XG5cbi5lcnJvci1yZXNwb25zZS1wYXJhZ3JhcGgge1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIGZvbnQtc2l6ZTogMC45cmVtO1xufSJdfQ== */";
+    /***/
+  },
+
+  /***/
+  "./src/app/components/display-geolocation-error/display-geolocation-error.component.ts":
+  /*!*********************************************************************************************!*\
+    !*** ./src/app/components/display-geolocation-error/display-geolocation-error.component.ts ***!
+    \*********************************************************************************************/
+
+  /*! exports provided: DisplayGeolocationErrorComponent */
+
+  /***/
+  function srcAppComponentsDisplayGeolocationErrorDisplayGeolocationErrorComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "DisplayGeolocationErrorComponent", function () {
+      return DisplayGeolocationErrorComponent;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+
+    var DisplayGeolocationErrorComponent = /*#__PURE__*/function () {
+      function DisplayGeolocationErrorComponent() {
+        _classCallCheck(this, DisplayGeolocationErrorComponent);
+      }
+
+      _createClass(DisplayGeolocationErrorComponent, [{
+        key: "ngOnInit",
+        value: function ngOnInit() {}
+      }]);
+
+      return DisplayGeolocationErrorComponent;
+    }();
+
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Object)], DisplayGeolocationErrorComponent.prototype, "geoError", void 0);
+    DisplayGeolocationErrorComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+      selector: 'app-display-geolocation-error',
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! raw-loader!./display-geolocation-error.component.html */
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/components/display-geolocation-error/display-geolocation-error.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! ./display-geolocation-error.component.scss */
+      "./src/app/components/display-geolocation-error/display-geolocation-error.component.scss"))["default"]]
+    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])], DisplayGeolocationErrorComponent);
+    /***/
+  },
+
+  /***/
   "./src/app/components/display-weather/display-weather.component.scss":
   /*!***************************************************************************!*\
     !*** ./src/app/components/display-weather/display-weather.component.scss ***!
@@ -159,7 +257,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "#container {\n  text-align: center;\n  position: absolute;\n  left: 0;\n  right: 0;\n  top: 15%;\n}\n\n.weather-icon {\n  text-align: center;\n  display: block;\n  margin-left: auto;\n  margin-right: auto;\n  height: 150px;\n  width: 150px;\n}\n\n.wind-icon {\n  height: 50px;\n  width: 50px;\n}\n\n.humidity-icon {\n  height: 50px;\n  width: 50px;\n}\n\n.inline-block {\n  align-items: baseline;\n  display: inline-block;\n}\n\n.bottom-icon {\n  vertical-align: middle;\n}\n\n.bottom-text {\n  display: inline-block;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2VkdWFyZG8vUHJvamV0b3MvZGlzcG9zaXRpdm9zLW1vdmVpcy1JSS9FbnRyZWdhcy93ZWF0aGVyLWFwcC9zcmMvYXBwL2NvbXBvbmVudHMvZGlzcGxheS13ZWF0aGVyL2Rpc3BsYXktd2VhdGhlci5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvY29tcG9uZW50cy9kaXNwbGF5LXdlYXRoZXIvZGlzcGxheS13ZWF0aGVyLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0csa0JBQUE7RUFDQSxrQkFBQTtFQUNBLE9BQUE7RUFDQSxRQUFBO0VBQ0EsUUFBQTtBQ0NIOztBREdBO0VBQ0csa0JBQUE7RUFDQSxjQUFBO0VBQ0EsaUJBQUE7RUFDQSxrQkFBQTtFQUNBLGFBQUE7RUFDQSxZQUFBO0FDQUg7O0FERUE7RUFDRyxZQUFBO0VBQ0EsV0FBQTtBQ0NIOztBREVBO0VBQ0csWUFBQTtFQUNBLFdBQUE7QUNDSDs7QURFQTtFQUNFLHFCQUFBO0VBQ0EscUJBQUE7QUNDRjs7QURFQTtFQUNHLHNCQUFBO0FDQ0g7O0FER0E7RUFDRyxxQkFBQTtBQ0FIIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50cy9kaXNwbGF5LXdlYXRoZXIvZGlzcGxheS13ZWF0aGVyLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiI2NvbnRhaW5lciB7XG4gICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICBsZWZ0OiAwO1xuICAgcmlnaHQ6IDA7XG4gICB0b3A6IDE1JTtcbiAgIC8vdHJhbnNmb3JtOiB0cmFuc2xhdGVZKC01MCUpO1xufVxuXG4ud2VhdGhlci1pY29uIHtcbiAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgIGRpc3BsYXk6IGJsb2NrO1xuICAgbWFyZ2luLWxlZnQ6IGF1dG87XG4gICBtYXJnaW4tcmlnaHQ6IGF1dG87XG4gICBoZWlnaHQ6IDE1MHB4O1xuICAgd2lkdGg6IDE1MHB4O1xufVxuLndpbmQtaWNvbiB7XG4gICBoZWlnaHQ6IDUwcHg7XG4gICB3aWR0aDogNTBweDtcbn1cblxuLmh1bWlkaXR5LWljb24ge1xuICAgaGVpZ2h0OiA1MHB4O1xuICAgd2lkdGg6IDUwcHg7XG59XG5cbi5pbmxpbmUtYmxvY2sge1xuICBhbGlnbi1pdGVtczogYmFzZWxpbmU7XG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbn1cblxuLmJvdHRvbS1pY29uIHtcbiAgIHZlcnRpY2FsLWFsaWduOiBtaWRkbGU7XG4gICAvL21hcmdpbi10b3A6IGF1dG87XG4gICAvL21hcmdpbi1ib3R0b206IGF1dG87XG59XG4uYm90dG9tLXRleHQge1xuICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xufVxuIiwiI2NvbnRhaW5lciB7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICBsZWZ0OiAwO1xuICByaWdodDogMDtcbiAgdG9wOiAxNSU7XG59XG5cbi53ZWF0aGVyLWljb24ge1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIGRpc3BsYXk6IGJsb2NrO1xuICBtYXJnaW4tbGVmdDogYXV0bztcbiAgbWFyZ2luLXJpZ2h0OiBhdXRvO1xuICBoZWlnaHQ6IDE1MHB4O1xuICB3aWR0aDogMTUwcHg7XG59XG5cbi53aW5kLWljb24ge1xuICBoZWlnaHQ6IDUwcHg7XG4gIHdpZHRoOiA1MHB4O1xufVxuXG4uaHVtaWRpdHktaWNvbiB7XG4gIGhlaWdodDogNTBweDtcbiAgd2lkdGg6IDUwcHg7XG59XG5cbi5pbmxpbmUtYmxvY2sge1xuICBhbGlnbi1pdGVtczogYmFzZWxpbmU7XG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbn1cblxuLmJvdHRvbS1pY29uIHtcbiAgdmVydGljYWwtYWxpZ246IG1pZGRsZTtcbn1cblxuLmJvdHRvbS10ZXh0IHtcbiAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xufSJdfQ== */";
+    __webpack_exports__["default"] = "#container {\n  text-align: center;\n  position: absolute;\n  left: 0;\n  right: 0;\n  top: 15%;\n}\n\n.weather-icon {\n  text-align: center;\n  display: block;\n  margin-left: auto;\n  margin-right: auto;\n  height: 83px;\n  width: 83px;\n}\n\n.wind-icon {\n  height: 50px;\n  width: 50px;\n}\n\n.humidity-icon {\n  height: 50px;\n  width: 50px;\n}\n\n.inline-block {\n  align-items: baseline;\n  display: inline-block;\n}\n\n.bottom-icon {\n  vertical-align: middle;\n}\n\n.bottom-text {\n  display: inline-block;\n}\n\n.card-typography {\n  color: white;\n}\n\n.card-temperature {\n  max-width: 60%;\n  margin-left: auto;\n  margin-right: auto;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2VkdWFyZG8vUHJvamV0b3MvZGlzcG9zaXRpdm9zLW1vdmVpcy1JSS9FbnRyZWdhcy93ZWF0aGVyLWFwcC9zcmMvYXBwL2NvbXBvbmVudHMvZGlzcGxheS13ZWF0aGVyL2Rpc3BsYXktd2VhdGhlci5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvY29tcG9uZW50cy9kaXNwbGF5LXdlYXRoZXIvZGlzcGxheS13ZWF0aGVyLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0csa0JBQUE7RUFDQSxrQkFBQTtFQUNBLE9BQUE7RUFDQSxRQUFBO0VBQ0EsUUFBQTtBQ0NIOztBREdBO0VBQ0csa0JBQUE7RUFDQSxjQUFBO0VBQ0EsaUJBQUE7RUFDQSxrQkFBQTtFQUNBLFlBQUE7RUFDQSxXQUFBO0FDQUg7O0FERUE7RUFDRyxZQUFBO0VBQ0EsV0FBQTtBQ0NIOztBREVBO0VBQ0csWUFBQTtFQUNBLFdBQUE7QUNDSDs7QURFQTtFQUNHLHFCQUFBO0VBQ0EscUJBQUE7QUNDSDs7QURFQTtFQUNHLHNCQUFBO0FDQ0g7O0FER0E7RUFDRyxxQkFBQTtBQ0FIOztBREdBO0VBQ0csWUFBQTtBQ0FIOztBREdBO0VBQ0csY0FBQTtFQUNBLGlCQUFBO0VBQ0Esa0JBQUE7QUNBSCIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvZGlzcGxheS13ZWF0aGVyL2Rpc3BsYXktd2VhdGhlci5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIiNjb250YWluZXIge1xuICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgbGVmdDogMDtcbiAgIHJpZ2h0OiAwO1xuICAgdG9wOiAxNSU7XG4gICAvL3RyYW5zZm9ybTogdHJhbnNsYXRlWSgtNTAlKTtcbn1cblxuLndlYXRoZXItaWNvbiB7XG4gICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICBkaXNwbGF5OiBibG9jaztcbiAgIG1hcmdpbi1sZWZ0OiBhdXRvO1xuICAgbWFyZ2luLXJpZ2h0OiBhdXRvO1xuICAgaGVpZ2h0OiA4M3B4O1xuICAgd2lkdGg6IDgzcHg7XG59XG4ud2luZC1pY29uIHtcbiAgIGhlaWdodDogNTBweDtcbiAgIHdpZHRoOiA1MHB4O1xufVxuXG4uaHVtaWRpdHktaWNvbiB7XG4gICBoZWlnaHQ6IDUwcHg7XG4gICB3aWR0aDogNTBweDtcbn1cblxuLmlubGluZS1ibG9jayB7XG4gICBhbGlnbi1pdGVtczogYmFzZWxpbmU7XG4gICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG59XG5cbi5ib3R0b20taWNvbiB7XG4gICB2ZXJ0aWNhbC1hbGlnbjogbWlkZGxlO1xuICAgLy9tYXJnaW4tdG9wOiBhdXRvO1xuICAgLy9tYXJnaW4tYm90dG9tOiBhdXRvO1xufVxuLmJvdHRvbS10ZXh0IHtcbiAgIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbn1cblxuLmNhcmQtdHlwb2dyYXBoeSB7XG4gICBjb2xvcjogd2hpdGU7XG59XG5cbi5jYXJkLXRlbXBlcmF0dXJlIHtcbiAgIG1heC13aWR0aDogNjAlO1xuICAgbWFyZ2luLWxlZnQ6IGF1dG87XG4gICBtYXJnaW4tcmlnaHQ6IGF1dG87XG59XG4iLCIjY29udGFpbmVyIHtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIGxlZnQ6IDA7XG4gIHJpZ2h0OiAwO1xuICB0b3A6IDE1JTtcbn1cblxuLndlYXRoZXItaWNvbiB7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgZGlzcGxheTogYmxvY2s7XG4gIG1hcmdpbi1sZWZ0OiBhdXRvO1xuICBtYXJnaW4tcmlnaHQ6IGF1dG87XG4gIGhlaWdodDogODNweDtcbiAgd2lkdGg6IDgzcHg7XG59XG5cbi53aW5kLWljb24ge1xuICBoZWlnaHQ6IDUwcHg7XG4gIHdpZHRoOiA1MHB4O1xufVxuXG4uaHVtaWRpdHktaWNvbiB7XG4gIGhlaWdodDogNTBweDtcbiAgd2lkdGg6IDUwcHg7XG59XG5cbi5pbmxpbmUtYmxvY2sge1xuICBhbGlnbi1pdGVtczogYmFzZWxpbmU7XG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbn1cblxuLmJvdHRvbS1pY29uIHtcbiAgdmVydGljYWwtYWxpZ246IG1pZGRsZTtcbn1cblxuLmJvdHRvbS10ZXh0IHtcbiAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xufVxuXG4uY2FyZC10eXBvZ3JhcGh5IHtcbiAgY29sb3I6IHdoaXRlO1xufVxuXG4uY2FyZC10ZW1wZXJhdHVyZSB7XG4gIG1heC13aWR0aDogNjAlO1xuICBtYXJnaW4tbGVmdDogYXV0bztcbiAgbWFyZ2luLXJpZ2h0OiBhdXRvO1xufSJdfQ== */";
     /***/
   },
 
@@ -345,6 +443,12 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     var _components_display_error_display_error_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
     /*! ../components/display-error/display-error.component */
     "./src/app/components/display-error/display-error.component.ts");
+    /* harmony import */
+
+
+    var _components_display_geolocation_error_display_geolocation_error_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
+    /*! ../components/display-geolocation-error/display-geolocation-error.component */
+    "./src/app/components/display-geolocation-error/display-geolocation-error.component.ts");
 
     var ReportPageModule = function ReportPageModule() {
       _classCallCheck(this, ReportPageModule);
@@ -352,7 +456,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
     ReportPageModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
       imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"], _report_routing_module__WEBPACK_IMPORTED_MODULE_5__["ReportPageRoutingModule"]],
-      declarations: [_report_page__WEBPACK_IMPORTED_MODULE_6__["ReportPage"], _components_display_weather_display_weather_component__WEBPACK_IMPORTED_MODULE_7__["DisplayWeatherComponent"], _components_display_error_display_error_component__WEBPACK_IMPORTED_MODULE_8__["DisplayErrorComponent"]]
+      declarations: [_report_page__WEBPACK_IMPORTED_MODULE_6__["ReportPage"], _components_display_weather_display_weather_component__WEBPACK_IMPORTED_MODULE_7__["DisplayWeatherComponent"], _components_display_error_display_error_component__WEBPACK_IMPORTED_MODULE_8__["DisplayErrorComponent"], _components_display_geolocation_error_display_geolocation_error_component__WEBPACK_IMPORTED_MODULE_9__["DisplayGeolocationErrorComponent"]]
     })], ReportPageModule);
     /***/
   },
@@ -426,14 +530,21 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     var _ionic_angular__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
     /*! @ionic/angular */
     "./node_modules/@ionic/angular/fesm2015/ionic-angular.js");
+    /* harmony import */
+
+
+    var _ionic_native_vibration_ngx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! @ionic-native/vibration/ngx */
+    "./node_modules/@ionic-native/vibration/ngx/index.js");
 
     var ReportPage = /*#__PURE__*/function () {
-      function ReportPage(loadingController, route, openWeather) {
+      function ReportPage(loadingController, route, openWeather, vibration) {
         _classCallCheck(this, ReportPage);
 
         this.loadingController = loadingController;
         this.route = route;
         this.openWeather = openWeather;
+        this.vibration = vibration;
       }
 
       _createClass(ReportPage, [{
@@ -479,15 +590,19 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                     return this.presentLoading();
 
                   case 2:
-                    this.openWeather.getForecast(this.route.snapshot.params.city, this.route.snapshot.params.country).subscribe(function (r) {
+                    this.openWeather.getForecastByCityName(this.route.snapshot.params.city, this.route.snapshot.params.country).subscribe(function (r) {
                       return _this.report = r;
                     }, function (error) {
-                      return _this.error = error;
-                    });
-                    _context2.next = 5;
-                    return this.loading.dismiss();
+                      _this.error = error;
 
-                  case 5:
+                      _this.vibration.vibrate(2000);
+
+                      _this.loading.dismiss();
+                    }, function () {
+                      _this.loading.dismiss();
+                    });
+
+                  case 3:
                   case "end":
                     return _context2.stop();
                 }
@@ -507,6 +622,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"]
       }, {
         type: _services_open_weather_service__WEBPACK_IMPORTED_MODULE_3__["OpenWeatherService"]
+      }, {
+        type: _ionic_native_vibration_ngx__WEBPACK_IMPORTED_MODULE_5__["Vibration"]
       }];
     };
 
@@ -518,7 +635,85 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! ./report.page.scss */
       "./src/app/report/report.page.scss"))["default"]]
-    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_4__["LoadingController"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"], _services_open_weather_service__WEBPACK_IMPORTED_MODULE_3__["OpenWeatherService"]])], ReportPage);
+    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_4__["LoadingController"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"], _services_open_weather_service__WEBPACK_IMPORTED_MODULE_3__["OpenWeatherService"], _ionic_native_vibration_ngx__WEBPACK_IMPORTED_MODULE_5__["Vibration"]])], ReportPage);
+    /***/
+  },
+
+  /***/
+  "./src/app/services/open-weather.service.ts":
+  /*!**************************************************!*\
+    !*** ./src/app/services/open-weather.service.ts ***!
+    \**************************************************/
+
+  /*! exports provided: OpenWeatherService */
+
+  /***/
+  function srcAppServicesOpenWeatherServiceTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "OpenWeatherService", function () {
+      return OpenWeatherService;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @angular/common/http */
+    "./node_modules/@angular/common/fesm2015/http.js");
+    /* harmony import */
+
+
+    var src_environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! src/environments/environment */
+    "./src/environments/environment.ts");
+
+    var OpenWeatherService = /*#__PURE__*/function () {
+      function OpenWeatherService(http) {
+        _classCallCheck(this, OpenWeatherService);
+
+        this.http = http;
+      }
+
+      _createClass(OpenWeatherService, [{
+        key: "getForecastByCityName",
+        value: function getForecastByCityName(city, country) {
+          return this.http.get("https://api.openweathermap.org/data/2.5/weather?q=".concat(city, ",,").concat(country, "&appid=").concat(src_environments_environment__WEBPACK_IMPORTED_MODULE_3__["OPEN_WEATHER_KEY"], "&units=metric"));
+        }
+      }, {
+        key: "getForecastByCoordinates",
+        value: function getForecastByCoordinates(latitude, longitude) {
+          return this.http.get("https://api.openweathermap.org/data/2.5/weather?lat=".concat(latitude, "&lon=").concat(longitude, "&appid=").concat(src_environments_environment__WEBPACK_IMPORTED_MODULE_3__["OPEN_WEATHER_KEY"], "&units=metric"));
+        }
+      }]);
+
+      return OpenWeatherService;
+    }();
+
+    OpenWeatherService.ctorParameters = function () {
+      return [{
+        type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]
+      }];
+    };
+
+    OpenWeatherService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+      providedIn: 'root'
+    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])], OpenWeatherService);
     /***/
   }
 }]);

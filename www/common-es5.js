@@ -1,9 +1,3 @@
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -460,79 +454,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     }();
     /***/
 
-  },
-
-  /***/
-  "./src/app/services/open-weather.service.ts":
-  /*!**************************************************!*\
-    !*** ./src/app/services/open-weather.service.ts ***!
-    \**************************************************/
-
-  /*! exports provided: OpenWeatherService */
-
-  /***/
-  function srcAppServicesOpenWeatherServiceTs(module, __webpack_exports__, __webpack_require__) {
-    "use strict";
-
-    __webpack_require__.r(__webpack_exports__);
-    /* harmony export (binding) */
-
-
-    __webpack_require__.d(__webpack_exports__, "OpenWeatherService", function () {
-      return OpenWeatherService;
-    });
-    /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
-    /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
-    /* harmony import */
-
-
-    var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! @angular/common/http */
-    "./node_modules/@angular/common/fesm2015/http.js");
-    /* harmony import */
-
-
-    var src_environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! src/environments/environment */
-    "./src/environments/environment.ts");
-
-    var OpenWeatherService = /*#__PURE__*/function () {
-      function OpenWeatherService(http) {
-        _classCallCheck(this, OpenWeatherService);
-
-        this.http = http;
-      }
-
-      _createClass(OpenWeatherService, [{
-        key: "getForecast",
-        value: function getForecast(city, country) {
-          return this.http.get("http://api.openweathermap.org/data/2.5/weather?q=".concat(city, ",,").concat(country, "&appid=").concat(src_environments_environment__WEBPACK_IMPORTED_MODULE_3__["OPEN_WEATHER_KEY"], "&units=metric"));
-        }
-      }]);
-
-      return OpenWeatherService;
-    }();
-
-    OpenWeatherService.ctorParameters = function () {
-      return [{
-        type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]
-      }];
-    };
-
-    OpenWeatherService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
-      providedIn: 'root'
-    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])], OpenWeatherService);
-    /***/
   }
 }]);
 //# sourceMappingURL=common-es5.js.map

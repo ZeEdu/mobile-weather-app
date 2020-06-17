@@ -9,7 +9,7 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div id=\"container\">\n   <form [formGroup]=\"location\">\n      <ion-item>\n         <ion-label position=\"stacked\">City</ion-label>\n         <ion-input formControlName=\"city\"></ion-input>\n      </ion-item>\n\n      <ion-item>\n         <ion-label position=\"stacked\">Country ID (Ex: USA, UK, BR)</ion-label>\n         <ion-input formControlName=\"country\"></ion-input>\n      </ion-item>\n\n      <ion-button\n         color=\"primary\"\n         [disabled]=\"!location.valid\"\n         routerLink=\"/report/{{ location.controls.city.value }}/{{\n            location.controls.country.value\n         }}\"\n         >Get Weather Report\n      </ion-button>\n   </form>\n   <ion-text\n      *ngIf=\"!location.controls.city.valid && !location.controls.city.pristine\"\n      color=\"danger\"\n      class=\"ion-text-center\"\n   >\n      <p>City is required</p>\n   </ion-text>\n   <ion-text\n      color=\"danger\"\n      *ngIf=\"\n         location.controls.city.value === '' && location.controls.city.touched\n      \"\n   >\n      <p>City is empty</p>\n   </ion-text>\n   <ion-text\n      color=\"danger\"\n      *ngIf=\"\n         !location.controls.country.valid && !location.controls.country.pristine\n      \"\n   >\n      <p>Country is required</p>\n   </ion-text>\n   <ion-text\n      color=\"danger\"\n      *ngIf=\"\n         location.controls.country.value === '' &&\n         location.controls.country.touched\n      \"\n   >\n      <p>Country is empty</p>\n   </ion-text>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div id=\"container\">\n   <form [formGroup]=\"location\">\n      <ion-item>\n         <ion-label position=\"stacked\">City</ion-label>\n         <ion-input formControlName=\"city\"></ion-input>\n      </ion-item>\n\n      <ion-item>\n         <ion-label position=\"stacked\">Country ID (Ex: USA, UK, BR)</ion-label>\n         <ion-input formControlName=\"country\"></ion-input>\n      </ion-item>\n\n      <ion-button\n         color=\"primary\"\n         expand=\"block\"\n         [disabled]=\"!location.valid\"\n         [routerLink]=\"[\n            '/report/',\n            location.controls.city.value,\n            location.controls.country.value\n         ]\"\n         >Report By City Name\n      </ion-button>\n   </form>\n   <ion-text\n      *ngIf=\"!location.controls.city.valid && !location.controls.city.pristine\"\n      color=\"danger\"\n      class=\"ion-text-center\"\n   >\n      <p>City is required</p>\n   </ion-text>\n   <ion-text\n      color=\"danger\"\n      *ngIf=\"\n         location.controls.city.value === '' && location.controls.city.touched\n      \"\n   >\n      <p>City is empty</p>\n   </ion-text>\n   <ion-text\n      color=\"danger\"\n      *ngIf=\"\n         !location.controls.country.valid && !location.controls.country.pristine\n      \"\n   >\n      <p>Country is required</p>\n   </ion-text>\n   <ion-text\n      color=\"danger\"\n      *ngIf=\"\n         location.controls.country.value === '' &&\n         location.controls.country.touched\n      \"\n   >\n      <p>Country is empty</p>\n   </ion-text>\n</div>\n");
 
 /***/ }),
 
@@ -52,19 +52,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
-/* harmony import */ var _services_open_weather_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../services/open-weather.service */ "./src/app/services/open-weather.service.ts");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
-
-
 
 
 
 let QueryCityComponent = class QueryCityComponent {
-    constructor(fb, weatherService, router, ActiveRoute) {
+    constructor(fb) {
         this.fb = fb;
-        this.weatherService = weatherService;
-        this.router = router;
-        this.ActiveRoute = ActiveRoute;
     }
     ngOnInit() {
         this.location = this.fb.group({
@@ -74,10 +67,7 @@ let QueryCityComponent = class QueryCityComponent {
     }
 };
 QueryCityComponent.ctorParameters = () => [
-    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"] },
-    { type: _services_open_weather_service__WEBPACK_IMPORTED_MODULE_3__["OpenWeatherService"] },
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"] },
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["ActivatedRoute"] }
+    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"] }
 ];
 QueryCityComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -85,10 +75,7 @@ QueryCityComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./query-city.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/components/query-city/query-city.component.html")).default,
         styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./query-city.component.scss */ "./src/app/components/query-city/query-city.component.scss")).default]
     }),
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"],
-        _services_open_weather_service__WEBPACK_IMPORTED_MODULE_3__["OpenWeatherService"],
-        _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"],
-        _angular_router__WEBPACK_IMPORTED_MODULE_4__["ActivatedRoute"]])
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"]])
 ], QueryCityComponent);
 
 
@@ -117,14 +104,14 @@ const routes = [
     {
         path: '',
         component: _home_page__WEBPACK_IMPORTED_MODULE_3__["HomePage"],
-    }
+    },
 ];
 let HomePageRoutingModule = class HomePageRoutingModule {
 };
 HomePageRoutingModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
         imports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forChild(routes)],
-        exports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"]]
+        exports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"]],
     })
 ], HomePageRoutingModule);
 

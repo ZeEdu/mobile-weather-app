@@ -9,9 +9,15 @@ import { ReportPageRoutingModule } from './report-routing.module';
 import { ReportPage } from './report.page';
 import { DisplayWeatherComponent } from '../components/display-weather/display-weather.component';
 import { DisplayErrorComponent } from '../components/display-error/display-error.component';
+import { DisplayGeolocationErrorComponent } from '../components/display-geolocation-error/display-geolocation-error.component';
 
 @NgModule({
    imports: [CommonModule, FormsModule, IonicModule, ReportPageRoutingModule],
-   declarations: [ReportPage, DisplayWeatherComponent, DisplayErrorComponent],
+   declarations: [
+      ReportPage,
+      DisplayWeatherComponent,
+      DisplayErrorComponent,
+      DisplayGeolocationErrorComponent,
+   ],
 })
 export class ReportPageModule {}

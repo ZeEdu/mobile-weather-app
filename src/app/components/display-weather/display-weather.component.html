@@ -1,27 +1,83 @@
-<div id="container">
-   <ion-img
-      src="http://openweathermap.org/img/wn/{{ report.weather[0].icon }}@2x.png"
-      class="weather-icon"
-   ></ion-img>
-   <ion-text color="primary">
-      <h1>{{ report.name }}, {{ report.sys.country }}</h1>
-   </ion-text>
-   <ion-text color="tertiary">
-      <p>{{ report.main.temp }} Cº</p>
-   </ion-text>
+<ion-grid>
+   <ion-row>
+      <ion-col size="4">
+         <ion-card color="primary">
+            <ion-img
+               src="https://openweathermap.org/img/wn/{{
+                  report.weather[0].icon
+               }}@2x.png"
+               class="weather-icon"
+            ></ion-img>
+         </ion-card>
+      </ion-col>
 
-   <div class="border-green ion-align-self-baseline">
-      <ion-img
-         src="assets/images/wind.svg"
-         class="wind-icon inline-block bottom-icon"
-      ></ion-img>
-      <span class="inline-block bottom-text"
-         >{{ report.wind.speed }} M/sec</span
-      >
-      <ion-img
-         src="assets/images/humidity.svg"
-         class="humidity-icon inline-block bottom-icon"
-      ></ion-img>
-      <span class="inline-block bottom-text">{{ report.main.humidity }} %</span>
-   </div>
-</div>
+      <ion-col size="8">
+         <ion-card color="primary">
+            <ion-card-header>
+               <ion-card-subtitle>{{
+                  report.weather[0].main
+               }}</ion-card-subtitle>
+               <ion-card-title class="ion-text-capitalize"
+                  >{{ report.weather[0].description }}
+               </ion-card-title>
+            </ion-card-header>
+         </ion-card>
+      </ion-col>
+   </ion-row>
+   <ion-row>
+      <ion-col size="6">
+         <ion-card>
+            <ion-card-header>
+               <ion-card-subtitle>Temperature</ion-card-subtitle>
+               <ion-card-title>{{ report.main.temp }} °C</ion-card-title>
+            </ion-card-header>
+         </ion-card>
+      </ion-col>
+      <ion-col size="6">
+         <ion-card>
+            <ion-card-header>
+               <ion-card-subtitle>{{ report.sys.country }}</ion-card-subtitle>
+               <ion-card-title>{{ report.name }}</ion-card-title>
+            </ion-card-header>
+         </ion-card>
+      </ion-col>
+   </ion-row>
+
+   <ion-row>
+      <ion-col size="6">
+         <ion-card>
+            <ion-card-header>
+               <ion-card-subtitle>Min Temp.</ion-card-subtitle>
+               <ion-card-title>{{ report.main.temp_min }}</ion-card-title>
+            </ion-card-header>
+         </ion-card>
+      </ion-col>
+      <ion-col size="6">
+         <ion-card>
+            <ion-card-header>
+               <ion-card-subtitle>Max. Temp.</ion-card-subtitle>
+               <ion-card-title>{{ report.main.temp_max }}</ion-card-title>
+            </ion-card-header>
+         </ion-card>
+      </ion-col>
+   </ion-row>
+
+   <ion-row>
+      <ion-col size="6">
+         <ion-card>
+            <ion-card-header>
+               <ion-card-subtitle> Humidity</ion-card-subtitle>
+               <ion-card-title>{{ report.main.humidity }} %</ion-card-title>
+            </ion-card-header>
+         </ion-card>
+      </ion-col>
+      <ion-col size="6">
+         <ion-card>
+            <ion-card-header>
+               <ion-card-subtitle> Wind Speed</ion-card-subtitle>
+               <ion-card-title>{{ report.wind.speed }} M/sec</ion-card-title>
+            </ion-card-header>
+         </ion-card>
+      </ion-col>
+   </ion-row>
+</ion-grid>

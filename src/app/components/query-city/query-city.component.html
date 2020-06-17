@@ -12,11 +12,14 @@
 
       <ion-button
          color="primary"
+         expand="block"
          [disabled]="!location.valid"
-         routerLink="/report/{{ location.controls.city.value }}/{{
+         [routerLink]="[
+            '/report/',
+            location.controls.city.value,
             location.controls.country.value
-         }}"
-         >Get Weather Report
+         ]"
+         >Report By City Name
       </ion-button>
    </form>
    <ion-text

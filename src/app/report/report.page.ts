@@ -4,6 +4,7 @@ import { OpenWeatherService } from '../services/open-weather.service';
 import { Report } from '../interfaces/report';
 import { ApiError } from '../interfaces/api-error';
 import { LoadingController } from '@ionic/angular';
+import { Vibration } from '@ionic-native/vibration/ngx';
 
 @Component({
    selector: 'app-report',
@@ -18,7 +19,8 @@ export class ReportPage implements OnInit {
    constructor(
       private loadingController: LoadingController,
       private route: ActivatedRoute,
-      private openWeather: OpenWeatherService
+      private openWeather: OpenWeatherService,
+      private vibration: Vibration
    ) {}
 
    async presentLoading() {
@@ -31,14 +33,20 @@ export class ReportPage implements OnInit {
    async ngOnInit() {
       await this.presentLoading();
       this.openWeather
-         .getForecast(
+         .getForecastByCityName(
             this.route.snapshot.params.city,
             this.route.snapshot.params.country
          )
          .subscribe(
             (r: Report) => (this.report = r),
-            (error: ApiError) => (this.error = error)
+            (error: ApiError) => {
+               this.error = error;
+               this.vibration.vibrate(2000);
+               this.loading.dismiss();
+            },
+            () => {
+               this.loading.dismiss();
+            }
          );
-      await this.loading.dismiss();
    }
 }
